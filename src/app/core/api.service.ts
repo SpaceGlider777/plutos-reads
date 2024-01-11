@@ -6,7 +6,8 @@ import { catchError, throwError, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  url = 'http://localhost:5000/';
+  // url = 'http://localhost:5000/';
+  url = 'http://plutos-reads-api.azurewebsites.net';
 
   constructor(private httpClient: HttpClient) { }
 
