@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" class="mat-elevation-z2">
+    <span class="logo" (click)="goToHome()">
+        <mat-icon>auto_stories</mat-icon>
+        <span>Pluto's Reads</span>
+    </span>
+    <span>
+        <input placeholder="Search titles..." [formControl]="search" (keyup.enter)="goToSearch()">
+        <button mat-icon-button (click)="goToSearch()">
+            <mat-icon>search</mat-icon>
+        </button>
+    </span>
+    <span>
+        <button mat-icon-button>
+            <mat-icon>shopping_cart</mat-icon>
+        </button>
+        <button mat-icon-button>
+            <mat-icon>person</mat-icon>
+        </button>
+    </span>
+</mat-toolbar>

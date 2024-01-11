@@ -1,0 +1,33 @@
+<ng-container *ngIf="book">
+    <div class="product-wrapper">
+        <img [src]="book['Image-URL-L']" width="350" height="500" class="mat-elevation-z3">
+        <div>
+            <h2>{{ book['Book-Title'] }}</h2>
+            <h4>Author: {{ book['Book-Author'] }}</h4>
+            <h4>Publisher: {{ book['Publisher'] }}</h4>
+            <h4>Year of Publication: {{ book['Year-Of-Publication'] }}</h4>
+            <h4>Rating: {{ book['Average-Book-Rating'] }}/10 ({{ book['Ratings-Count'] }} ratings)</h4>
+            <button mat-raised-button color="primary">Purchase</button>
+            <button mat-stroked-button color="primary">Add to Cart</button>
+        </div>
+    </div>
+
+    <mat-divider></mat-divider>
+    
+    <div class="recommendations">
+        <h2 *ngIf="!hasRecommendations; else recs">Not enough ratings to provide recommendations.</h2>
+
+        <ng-template #recs>
+            <h2>Customers also bought</h2>
+
+            <mat-grid-list cols="6" rowHeight="400">
+                <mat-grid-tile *ngFor="let book of recommendations" class="book-tile">
+                    <div class="tile-content">
+                        <img [src]="book['Image-URL-L']" width="200" height="300" class="mat-elevation-z3" (click)="goToProduct(book['ISBN'])"><br>
+                        <h4>{{ book['Book-Title'] }}</h4>
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </ng-template>
+    </div>
+</ng-container>

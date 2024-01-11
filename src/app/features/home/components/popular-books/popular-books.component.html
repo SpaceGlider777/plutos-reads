@@ -1,0 +1,12 @@
+<ng-container *ngIf="books">
+    <h2>Top Sellers</h2>
+
+    <mat-grid-list cols="6" rowHeight="400">
+        <mat-grid-tile *ngFor="let book of books" class="book-tile">
+            <div class="tile-content">
+                <img [src]="book['Image-URL-L']" width="200" height="300" class="mat-elevation-z3" (click)="goToProduct(book['ISBN'])"><br>
+                <h4>{{ book['Book-Title'] }}</h4>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</ng-container>

@@ -1,0 +1,22 @@
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+input {
+    width: 20rem;
+    padding: 6px;
+    border: 3px solid white;
+    border-radius: 4px;
+    outline: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}

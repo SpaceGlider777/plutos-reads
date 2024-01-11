@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { 
+    // height: 100%; 
+}
+
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: #EFEBE9;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 500 !important;
+}
+
+// Custom styling for searchbar
+#searchbar {
+    div.mat-form-field-wrapper {
+        div.mat-form-field-flex {
+            div.mat-form-field-infix {
+                padding: 0.5rem;
+            }
+
+            div.mat-form-field-outline {
+                color: white;
+            }
+        }
+    }
+}
+
+.book-tile {
+    .mat-grid-tile-content {
+        align-items: baseline;
+        justify-content: left;
+    }
+}
